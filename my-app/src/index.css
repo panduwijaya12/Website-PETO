@@ -1,0 +1,73 @@
+/* src/index.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+/* src/index.css atau src/App.css */
+
+/* Mengatur latar belakang penuh di halaman pertama (Home) */
+#home {
+  background-image: url('../src/assets/Background\ peto\ copy.png'); /* Gambar latar belakang halaman pertama */
+  background-size: cover; /* Gambar menutupi seluruh halaman */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Mengisi seluruh layar */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Latar belakang default di halaman lainnya */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Latar belakang default */
+}
+
+/* Gaya untuk bagian header */
+.header {
+  background-color: rgba(0, 0, 0, 0.7); /* Mengatur latar belakang header menjadi semi-transparan */
+  padding: 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
