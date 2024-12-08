@@ -62,7 +62,7 @@ function App() {
               every detail of your event is meticulously planned and executed to
               perfection. With PETO, let your vision become reality.
             </p>
-            <a href="#form" className="cta-button">
+            <a href="#contact" className="cta-button">
               Submit Your Details
             </a>
           </div>
