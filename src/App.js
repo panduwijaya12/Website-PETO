@@ -239,36 +239,36 @@ function App() {
 
 {/* Form Section */}
 <section className="review-form">
-          <h2>Leave a Review</h2>
-          <form onSubmit={handleAddReview}>
-            <textarea
-              value={reviewInput}
-              onChange={handleInputChange}
-              placeholder="Write your review here..."
-              rows="4"
-              required
-            ></textarea>
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
-          </form>
-        </section>
+  <h2>Leave a Review</h2>
+  <form onSubmit={handleAddReview}>
+    <textarea
+      value={reviewInput}
+      onChange={handleInputChange}
+      placeholder="Write your review here..."
+      rows="4"
+      required
+    ></textarea>
+    <button type="submit" className="submit-button">
+      Submit
+    </button>
+  </form>
+</section>
 
-        {/* Reviews Section */}
-        <section className="review-list">
-          <h2>Reviews</h2>
-          {reviews.length > 0 ? (
-            <ul>
-              {reviews.map((review, index) => (
-                <li key={index} className="review-item">
-                  {review}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-reviews">No reviews yet. Be the first to leave one!</p>
-          )}
-        </section>
+{/* Reviews Section */}
+<section className="review-list">
+  <h2>Reviews</h2>
+  {reviews.length > 0 ? (
+    <ul>
+      {reviews.map((review, index) => (
+        <li key={index} className="review-item">
+          {review}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p className="no-reviews">No reviews yet. Be the first to leave one!</p>
+  )}
+</section>
       </main>
       <Footer />
     </div>
