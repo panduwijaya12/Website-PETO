@@ -212,7 +212,7 @@ function App() {
             <img src={require('../src/assets/pertamina.png')} alt="Client 5 Logo" />
         </div>
         <div className="client-item">
-            <img src={require('../src/assets/BUMN.svg.png')} alt="Client 6 Logo" />
+            <img src={require('')} alt="Client 6 Logo" />
         </div>
         <div className="client-item">
             <img src={require('../src/assets/B20.png')} alt="Client 6 Logo" />
