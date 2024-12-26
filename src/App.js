@@ -95,7 +95,7 @@ function App() {
           </div>
         </section>
 
-        {/* Halaman Portfolio */}
+       {/* Halaman Portfolio */}
 <section id="portfolio" className="portfolio-section">
   <h2>Our Portfolio</h2>
   <p>Check out our past events and how we bring your ideas to life.</p>
@@ -104,7 +104,7 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/summit.JPEG')} alt="Portfolio 2" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 2</h3>
+        <h3>IPEF 2023</h3>
       </div>
     </div>
 
@@ -112,15 +112,15 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/image2.JPEG')} alt="Portfolio 3" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 3</h3>
+        <h3>TOP BRAND</h3>
       </div>
     </div>
 
-    {/* Foto 3*/}
+    {/* Foto 3 */}
     <div className="portfolio-item">
       <img src={require('../src/assets/image4.JPEG')} alt="Portfolio 4" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>TOP BRAND</h3>
+        <h3>Elnusa Petorfin</h3>
       </div>
     </div>
 
@@ -136,7 +136,7 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/image.JPEG')} alt="Portfolio 6" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 6</h3>
+        <h3>Artajasa Member Meeting</h3>
       </div>
     </div>
 
@@ -144,7 +144,7 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/summit 2.JPEG')} alt="Portfolio 7" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 7</h3>
+        <h3>G20</h3>
       </div>
     </div>
 
@@ -152,7 +152,7 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/B20 Summit.JPEG')} alt="Portfolio 8" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 8</h3>
+        <h3>B20</h3>
       </div>
     </div>
 
@@ -160,28 +160,7 @@ function App() {
     <div className="portfolio-item">
       <img src={require('../src/assets/Soe International Conference.JPEG')} alt="Portfolio 9" className="portfolio-image" />
       <div className="portfolio-text">
-        <h3>Event Title 8</h3>
-      </div>
-    </div>
-    {/* Foto 8 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/Soe International Conference.JPEG')} alt="Portfolio 9" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Event Title 8</h3>
-      </div>
-    </div>
-    {/* Foto 8 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/Soe International Conference.JPEG')} alt="Portfolio 9" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Event Title 8</h3>
-      </div>
-    </div>
-    {/* Foto 8 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/Soe International Conference.JPEG')} alt="Portfolio 9" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Event Title 8</h3>
+        <h3>Soe International Conference</h3>
       </div>
     </div>
   </div>
@@ -209,7 +188,7 @@ function App() {
             <img src={require('../src/assets/Logo-C20.png')} alt="Client 4 Logo" />
         </div>
         <div className="client-item">
-            <img src={require('../src/assets/pertamina.png')} alt="Client 5 Logo" />
+            <img src={require('../src/assets/BUMN.svg.png')} alt="Client 5 Logo" />
         </div>
         <div className="client-item">
             <img src={require('../src/assets/pertamina.png')} alt="Client 6 Logo" />

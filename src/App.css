@@ -1,6 +1,4 @@
-/* src/App.css */
 
-/* Halaman pertama dengan background full */
 .full-screen {
   position: relative;
   height: 100vh;
@@ -9,10 +7,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Rata kiri */
-  padding: 0 50px; /* Tambahkan padding untuk jarak dari tepi kiri */
+  align-items: flex-start; 
+  padding: 0 50px; 
   color: white;
-  text-align: left; /* Sesuaikan teks agar rata kiri */
+  text-align: left;
 }
 
 /* Overlay untuk mempergelap gambar */
@@ -23,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Warna hitam semi-transparan untuk background */
+  background-color: rgba(0, 0, 0, 0.4); 
   z-index: 1;
 }
 
@@ -116,16 +114,16 @@ section {
 /* Media query untuk tampilan mobile */
 @media (max-width: 768px) {
   .about-content {
-    flex-direction: column; /* Ubah arah menjadi vertikal */
-    text-align: center; /* Rata tengah untuk konten */
+    flex-direction: column; 
+    text-align: center; 
   }
 
   .about-image {
-    margin-bottom: 20px; /* Berikan jarak antara gambar dan teks */
+    margin-bottom: 20px; 
   }
 
   .about-text {
-    max-width: 100%; /* Biarkan teks menggunakan lebar penuh */
+    max-width: 100%;
   }
 }
 
@@ -133,67 +131,78 @@ section {
 #portfolio, #clients, #contact {
   background-color: #ffffff;
 }
-/* Halaman Portfolio */
-#portfolio {
-  padding: 50px;
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 50px 20px;
 }
 
+.portfolio-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 400; 
+}
 .portfolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
 }
 
 .portfolio-image {
-    width: 100%;
-    height: 200px; /* Sesuaikan tinggi */
-    object-fit: cover; /* Mengatur gambar agar memenuhi frame tanpa distorsi */
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-image {
-    transform: scale(1.1); /* Efek zoom saat hover */
+.portfolio-image:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .portfolio-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* Responsif untuk ukuran layar kecil */
 @media (max-width: 768px) {
   .portfolio-item {
-    width: 100%; /* Menyesuaikan lebar untuk perangkat lebih kecil */
+    width: 100%; 
   }
 }
 /* Halaman Our Clients */
 .clients-section {
   text-align: center;
   padding: 40px 20px;
-  background-color: #f9f9f9; /* Warna latar belakang */
+  background-color: #f9f9f9; 
 }
 
 .clients-section h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .clients-description {
@@ -208,20 +217,20 @@ section {
 
 .clients-gallery {
   display: flex;
-  flex-wrap: wrap; /* Layout responsif */
+  flex-wrap: wrap; 
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
 .client-item img {
-  height: 80px; /* Semua logo memiliki tinggi yang sama */
-  object-fit: contain; /* Memastikan gambar tidak terpotong */
-  transition: transform 0.3s ease; /* Efek hover */
+  height: 80px; 
+  object-fit: contain; 
+  transition: transform 0.3s ease; 
 }
 
 .client-item img:hover {
-  transform: scale(1.1); /* Perbesar sedikit saat hover */
+  transform: scale(1.1); 
 }
 
 /* Halaman Contact Us */
@@ -231,10 +240,13 @@ section {
   background-color: #333;
   color: white;
 }
-
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 .whatsapp-button {
   display: inline-block;
-  background-color: #25d366; /* Warna khas WhatsApp */
+  background-color: #25d366; 
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -245,7 +257,7 @@ section {
 }
 
 .whatsapp-button:hover {
-  background-color: #128c7e; /* Warna lebih gelap saat hover */
+  background-color: #128c7e; 
 }
 
 /* folmulir
@@ -365,6 +377,7 @@ section {
   text-align: center;
   font-size: 0.9rem;
 }
+
 
 @media (max-width: 768px) {
   .review-form textarea {
