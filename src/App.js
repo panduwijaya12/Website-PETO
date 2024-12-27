@@ -42,6 +42,27 @@ function App() {
     }
   };
 
+  // Menambahkan portfolio gambar dan judulnya
+  const portfolioImages = [
+    { src: require('../src/assets/summit.JPEG'), title: 'IPEF 2023' },
+    { src: require('../src/assets/image2.JPEG'), title: 'TOP BRAND' },
+    { src: require('../src/assets/image4.JPEG'), title: 'Elnusa Petorfin' },
+    { src: require('../src/assets/ASEAN summit.JPEG'), title: 'ASEAN Summit' },
+    { src: require('../src/assets/image.JPEG'), title: 'ATM Bersama' },
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Fungsi untuk mengganti gambar ke kiri
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? portfolioImages.length - 1 : prevIndex - 1));
+  };
+
+  // Fungsi untuk mengganti gambar ke kanan
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === portfolioImages.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
     <div>
       <Header />
@@ -95,76 +116,29 @@ function App() {
           </div>
         </section>
 
-       {/* Halaman Portfolio */}
-<section id="portfolio" className="portfolio-section">
-  <h2>Our Portfolio</h2>
-  <p>Check out our past events and how we bring your ideas to life.</p>
-  <div className="portfolio-gallery">
-    {/* Foto 1 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/summit.JPEG')} alt="Portfolio 2" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>IPEF 2023</h3>
-      </div>
-    </div>
+        {/* Halaman Portfolio */}
+        <section id="portfolio" className="portfolio-section">
+          <h2>Our Portfolio</h2>
+          <p>Check out our past events and how we bring your ideas to life.</p>
 
-    {/* Foto 2 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/image2.JPEG')} alt="Portfolio 3" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>TOP BRAND</h3>
-      </div>
-    </div>
+          {/* Gambar Portofolio */}
+          <div className="portfolio-gallery">
+            <div className="portfolio-image-container">
+              <img
+                src={portfolioImages[currentImageIndex].src}
+                alt={`Portfolio ${currentImageIndex + 1}`}
+                className="portfolio-image"
+              />
+              <div className="portfolio-title">
+                <h3>{portfolioImages[currentImageIndex].title}</h3>
+              </div>
+            </div>
 
-    {/* Foto 3 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/image4.JPEG')} alt="Portfolio 4" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Elnusa Petorfin</h3>
-      </div>
-    </div>
-
-    {/* Foto 4 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/ASEAN summit.JPEG')} alt="Portfolio 5" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>ASEAN</h3>
-      </div>
-    </div>
-
-    {/* Foto 5 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/image.JPEG')} alt="Portfolio 6" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Artajasa Member Meeting</h3>
-      </div>
-    </div>
-
-    {/* Foto 6 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/summit 2.JPEG')} alt="Portfolio 7" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>G20</h3>
-      </div>
-    </div>
-
-    {/* Foto 7 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/B20 Summit.JPEG')} alt="Portfolio 8" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>B20</h3>
-      </div>
-    </div>
-
-    {/* Foto 8 */}
-    <div className="portfolio-item">
-      <img src={require('../src/assets/Soe International Conference.JPEG')} alt="Portfolio 9" className="portfolio-image" />
-      <div className="portfolio-text">
-        <h3>Soe International Conference</h3>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* Tombol navigasi */}
+            <button className="nav-button left" onClick={goToPrevious}>&lt;</button>
+            <button className="nav-button right" onClick={goToNext}>&gt;</button>
+          </div>
+        </section>
 
         {/* Halaman Our Clients */}
         <section id="clients" className="clients-section">
