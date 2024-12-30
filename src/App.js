@@ -24,7 +24,7 @@ function App() {
     setCurrentBackground(index);
   };
 
-  // State untuk menyimpan ulasan pengguna
+  //State untuk menyimpan ulasan pengguna
   const [reviews, setReviews] = useState([]);
   const [reviewInput, setReviewInput] = useState("");
 
@@ -38,7 +38,7 @@ function App() {
     e.preventDefault();
     if (reviewInput.trim()) {
       setReviews([...reviews, reviewInput]);
-      setReviewInput("");
+      setReviewInput("");  // Reset input setelah mengirim
     }
   };
 
