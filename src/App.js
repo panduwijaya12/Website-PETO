@@ -18,7 +18,7 @@ function App() {
     }, 5000);
     return () => clearInterval(interval);
   }, [backgrounds.length]);
-
+  
   // Manual navigation handler
   const goToSlide = (index) => {
     setCurrentBackground(index);
