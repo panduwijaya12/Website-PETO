@@ -24,21 +24,28 @@ function App() {
     setCurrentBackground(index);
   };
 
-  //State untuk menyimpan ulasan pengguna
+  // State untuk menyimpan ulasan pengguna
   const [reviews, setReviews] = useState([]);
   const [reviewInput, setReviewInput] = useState("");
+  const [userName, setUserName] = useState("");
 
   // Fungsi untuk menangani input ulasan
   const handleInputChange = (e) => {
     setReviewInput(e.target.value);
   };
 
+  // Fungsi untuk menangani input nama pengguna
+  const handleNameChange = (e) => {
+    setUserName(e.target.value);
+  };
+
   // Fungsi untuk menambahkan ulasan ke daftar
   const handleAddReview = (e) => {
     e.preventDefault();
-    if (reviewInput.trim()) {
-      setReviews([...reviews, reviewInput]);
-      setReviewInput("");  // Reset input setelah mengirim
+    if (reviewInput.trim() && userName.trim()) {
+      setReviews([...reviews, { name: userName, review: reviewInput }]);
+      setReviewInput(""); // Reset input ulasan
+      setUserName("");    // Reset input nama
     }
   };
 
@@ -188,37 +195,44 @@ function App() {
 </section>
 
 {/* Form Section */}
-<section className="review-form">
-  <h2>Leave a Review</h2>
-  <form onSubmit={handleAddReview}>
-    <textarea
-      value={reviewInput}
-      onChange={handleInputChange}
-      placeholder="Write your review here..."
-      rows="4"
-      required
-    ></textarea>
-    <button type="submit" className="submit-button">
-      Submit
-    </button>
-  </form>
-</section>
+        <section className="review-form">
+          <h2>Leave a Review</h2>
+          <form onSubmit={handleAddReview}>
+            <input
+              type="text"
+              value={userName}
+              onChange={handleNameChange}
+              placeholder="Your name"
+              required
+            />
+            <textarea
+              value={reviewInput}
+              onChange={handleInputChange}
+              placeholder="Write your review here..."
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
+          </form>
+        </section>
 
-{/* Reviews Section */}
-<section className="review-list">
-  <h2>Reviews</h2>
-  {reviews.length > 0 ? (
-    <ul>
-      {reviews.map((review, index) => (
-        <li key={index} className="review-item">
-          {review}
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p className="no-reviews">No reviews yet. Be the first to leave one!</p>
-  )}
-</section>
+        {/* Reviews Section */}
+        <section className="reviews">
+          <h2>User Reviews</h2>
+          {reviews.length > 0 ? (
+            <ul>
+              {reviews.map((review, index) => (
+                <li key={index}>
+                  <strong>{review.name}:</strong> {review.review}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No reviews yet. Be the first to leave a review!</p>
+          )}
+        </section>
       </main>
       <Footer />
     </div>
